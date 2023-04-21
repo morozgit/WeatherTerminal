@@ -8,10 +8,11 @@ def chek_ru_letter(text, alphabet=set('абвгдеёжзийклмнопрст�
 def show_weather(places):
     for place in places:
         if chek_ru_letter(place):
-            url = 'http://wttr.in/{}?nqTM&lang=ru'.format(place)
+            payload = {'nqTM': '', 'lang': 'ru'}
         else:
-            url = 'http://wttr.in/{}?nTqu&lang=en'.format(place)
-        response = requests.get(url)
+            payload = {'nTqu': '', 'lang': 'en'}
+        url = 'http://wttr.in/{}'.format(place)
+        response = requests.get(url, params=payload)
         response.raise_for_status()
         print(response.text)
 
