@@ -11,10 +11,12 @@
     ```
    sudo apt-get install python3
     ```
-2. Установите библиотеку requests 
+2. Установите библиотеку requests 2.28.2
+   
+   Данная команда установит требуемые библиотеки
 
     ```python
-    pip install requests
+    pip install -r requirements.txt
     ```
 3. Клонируйте репозиторий
 
